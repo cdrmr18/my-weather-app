@@ -1,0 +1,17 @@
+body {
+  margin: 100px auto;
+  width: 80vw;
+  max-width: 700px;
+}
+
+.main_cloud,
+.week_clouds {
+  font-size: 45px;
+}
+#weather-description {
+  text-transform: capitalize;
+  font-weight: 500;
+}
+#city-name {
+  text-transform: capitalize;
+}

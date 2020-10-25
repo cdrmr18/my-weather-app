@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/3e929ff82b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <div class="container">
+    <body>
+      <div class="row">
+        <div class="col-6">
+          <form id="search-city">
+            <input type="text" placeholder="Search city" id="city-search" />
+            <input type="submit" value="Search" id="submit-city" />
+          </form>
+        </div>
+
+        <div class="col-6" id="current-date">
+          <p>Sep 29 2020</p>
+        </div>
+      </div>
+
+      <h1 id="city-name"></h1>
+
+      <div class="row">
+        <div class="col-6">
+          <h2 id="current-temp"></h2>
+          <div id="weather-description"></div>
+          <p><a href="#" id="faren">F</a>|<a href="#" id="celc">C</a></p>
+        </div>
+        <div class="col-6">
+          <i class="fas fa-cloud-sun main_cloud"></i>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">M</div>
+        <div class="col">T</div>
+        <div class="col">W</div>
+        <div class="col">Th</div>
+        <div class="col">F</div>
+      </div>
+      <div class="row">
+        <div class="col card week_clouds" style="width: 18rem">
+          <i class="fas fa-cloud"></i>87°
+        </div>
+        <div class="col card week_clouds" style="width: 18rem">
+          <i class="fas fa-cloud-rain"></i>85°
+        </div>
+        <div class="col card week_clouds" style="width: 18rem">
+          <i class="fas fa-cloud-rain"></i>87°
+        </div>
+        <div class="col card week_clouds" style="width: 18rem">
+          <i class="fas fa-cloud"></i>85°
+        </div>
+        <div class="col card week_clouds" style="width: 18rem">
+          <i class="fas fa-cloud-sun"></i>88°
+        </div>
+      </div>
+      <script src="script.js"></script>
+    </body>
+  </div>
+</html>
