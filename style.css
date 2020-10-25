@@ -20,20 +20,46 @@ li {
   font-size: 16px;
   font-weight: 100;
   margin: 0 0 30px 15px;
-  line-height: 19px;
   margin: 0;
   padding: 0;
 }
-
-.main_cloud,
+#current-temp {
+  font-size: 50px;
+  font-weight: 400;
+  margin-left: 35px;
+}
+.degrees {
+  position: relative;
+  top: -1;
+  margin: 14px 0 0 10px;
+}
+.overview li {
+  line-height: 5px;
+}
+.main_cloud {
+  margin: 0 0 20px 33px;
+  font-size: 90px;
+}
 .week_clouds {
-  font-size: 45px;
+  font-size: 35px;
 }
 
+.overview {
+  margin-bottom: 20px;
+}
+.temp-box {
+  margin-bottom: 50px;
+}
+.weather-alt-info {
+  margin-top: 11px;
+}
 #weatherCondition {
   text-transform: capitalize;
 }
-
+.weather-app-wrapper {
+  max-width: 500px;
+  margin: 30px auto;
+}
 .weather-app-box {
   max-width: 600px;
   margin: 30px auto;

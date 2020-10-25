@@ -18,77 +18,86 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
     <div class="container">
-      <div class="weather-app-box">
-        <body>
-          <div class="row">
-            <div class="col-6">
+      <div class="weather-app-wrapper">
+        <div class="weather-app-box">
+          <body>
+            <div class="row">
+              <div class="col-4">
+              </div>
+              <div class="col-8">
+                <form id="search-city">
+                  <input type="search" placeholder="Search city" id="city-search" />
+                  <input type="submit" value="Search" id="submit-city" class="btn btn-success" />
+                </form>
+              </div>
             </div>
-            <div class="col-6">
-              <form id="search-city">
-                <input type="search" placeholder="Search city" id="city-search" />
-                <input type="submit" value="Search" id="submit-city" class="btn btn-success" />
-              </form>
-            </div>
-          </div>
-      
-          <h1 id="city-name"></h1>
-          <ul>
-            <li>
-              <p id="current-date"></p>
-            </li>
-            <li>
-              <p id="weatherCondition"></p>
-            </li>
-          </ul>
-      
-          <div class="row">
-            <div class="col-6">
-              <span id="current-temp"> </span><a href="#" id="faren"> °F</a> | <a href="#" id="celc"> °C</a>
-            </div>
-            <div class="col-6">
-              <i class="fas fa-cloud-sun main_cloud"></i>
+            
+            <div class="overview">
+              <h1 id="city-name"></h1>
               <ul>
-                  <li>
-                      Humidity: <span id="humidity"></span>%
-                  </li>
-                  <li>
-                      Wind: <span id="wind"></span> km/h
-                  </li>
+                <li>
+                  <p id="current-date"></p>
+                </li>
+                <li>
+                  <p id="weatherCondition"></p>
+                </li>
               </ul>
             </div>
-          </div>
-      
-          <div class="row">
-            <div class="col">M</div>
-            <div class="col">T</div>
-            <div class="col">W</div>
-            <div class="col">Th</div>
-            <div class="col">F</div>
-          </div>
-          <div class="row">
-            <div class="col card week_clouds" style="width: 18rem;">
-              <i class="fas fa-cloud"></i>87°
-            </div>
-            <div class="col card week_clouds" style="width: 18rem;">
-              <i class="fas fa-cloud-rain"></i>85°
-            </div>
-            <div class="col card week_clouds" style="width: 18rem;">
-              <i class="fas fa-cloud-rain"></i>87°
-            </div>
-            <div class="col card week_clouds" style="width: 18rem;">
-              <i class="fas fa-cloud"></i>85°
-            </div>
-            <div class="col card week_clouds" style="width: 18rem;">
-              <i class="fas fa-cloud-sun"></i>88°
-            </div>
-          </div>
 
+            <div class="row">
+              <div class="col-4 temp-box">
+                <div>
+                  <ul class="weather-alt-info">
+                    <li>
+                      Humidity: <span id="humidity"></span>%
+                    </li>
+                    <li>
+                      Wind: <span id="wind"></span> km/h
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-8">
+                <div class="clearfix">
+                  <div id="current-temp" class="float-left"></div>
+                  <div class="float-left degrees">
+                    <a href="#" id="faren"> °F</a> | <a href="#" id="celc"> °C</a>
+                  </div>
+                  <div><i class="fas fa-cloud-sun main_cloud float-left" ></i></div>
+                </div>
+              </div>
+            </div>
+        
+            <div class="row">
+              <div class="col">M</div>
+              <div class="col">T</div>
+              <div class="col">W</div>
+              <div class="col">Th</div>
+              <div class="col">F</div>
+            </div>
+            <div class="row">
+              <div class="col card week_clouds" style="width: 18rem;">
+                <i class="fas fa-cloud"></i>87°
+              </div>
+              <div class="col card week_clouds" style="width: 18rem;">
+                <i class="fas fa-cloud-rain"></i>85°
+              </div>
+              <div class="col card week_clouds" style="width: 18rem;">
+                <i class="fas fa-cloud-rain"></i>87°
+              </div>
+              <div class="col card week_clouds" style="width: 18rem;">
+                <i class="fas fa-cloud"></i>85°
+              </div>
+              <div class="col card week_clouds" style="width: 18rem;">
+                <i class="fas fa-cloud-sun"></i>88°
+              </div>
+            </div>
+          </div> 
+        
           <p>
-            <p>
-              <a href="https://github.com/cdrmr18/my-weather-app" target="_blank">Open-source</a> by Kathy Tavia
-            </p>
+            <a href="https://github.com/cdrmr18/my-weather-app" target="_blank">Open-source</a> by Kathy Tavia
           </p>
-        </div> 
+        </div>
       <script src="script.js"></script>
     </body>
   </div>
