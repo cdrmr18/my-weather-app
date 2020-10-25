@@ -26,28 +26,38 @@ li {
 #current-temp {
   font-size: 50px;
   font-weight: 400;
-  margin-left: 35px;
+  position: relative;
+  top: 5px;
+  left: 55px;
 }
 .degrees {
   position: relative;
-  top: -1;
-  margin: 14px 0 0 10px;
+  top: 20px;
+  left: 65px;
+}
+#icon {
+  margin: 0 auto;
+  position: relative;
+  bottom: 28px;
+  left: 30px;
+  width: 135px;
 }
 .overview li {
   line-height: 5px;
 }
-.week_clouds {
-  font-size: 35px;
-}
 
 .overview {
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 .temp-box {
-  margin-bottom: 50px;
+  text-align: center;
+}
+.weather-box {
+  /* margin-bottom: 50px; */
 }
 .weather-alt-info {
-  margin-top: 11px;
+  position: relative;
+  top: 20px;
 }
 #weatherCondition {
   text-transform: capitalize;
@@ -62,4 +72,7 @@ li {
   padding: 20px;
   border: 1px solid black;
   border-radius: 5px;
+}
+.week_clouds {
+  font-size: 35px;
 }
