@@ -55,8 +55,6 @@ function search(city) {
   axios.get(apiUrl).then(showWeather);
 }
 function showWeather(response) {
-  console.log(response.data)
-  console.log(response.data.name);
   document.querySelector("#city-name").innerHTML = response.data.name;
   document.querySelector("#current-temp").innerHTML = Math.round(
     response.data.main.temp
@@ -68,6 +66,16 @@ function showWeather(response) {
   document.querySelector("#weatherCondition").innerHTML =
     response.data.weather[0].description;
   console.log();
+
+  let icon = response.data.weather[0].icon;
+  document.querySelector("#icon").setAttribute(
+    "src", 
+    `http://openweathermap.org/img/wn/${icon}@2x.png`
+    );
+    document.querySelector("#icon").setAttribute(
+      "alt",
+      response.data.weather[0].description
+    );
 }
 
 function handleSubmit(event) {
