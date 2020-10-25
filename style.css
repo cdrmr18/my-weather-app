@@ -8,10 +8,13 @@ body {
 .week_clouds {
   font-size: 45px;
 }
-#weather-description {
-  text-transform: capitalize;
-  font-weight: 500;
+
+ul {
+  list-style-type: none;
+  font-weight: lighter;
+  margin: 0 0 30px 15px;
+  padding: 0;
 }
-#city-name {
+#weatherCondition {
   text-transform: capitalize;
 }
