@@ -1,23 +1,3 @@
-// API weather set up
-let apiKey = "ce96567bcfe36200b8c50bb6f61e4a04";
-let city = "Sydney";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial`
-
-// Make a request for a user with a given ID
-axios.get(`${apiUrl}&appid=${apiKey}`)
-  .then(function (response) {
-    // handle success
-    console.log(response.data);
-    let temperature = Math.round(response.data.main.temp)
-    let tempDescription = document.querySelector("#weather-description")
-    let temperatureEle = document.querySelector("#current-temp")
-    temperatureEle.innerHTML = `${temperature}°F`;
-    tempDescription.innerHTML = response.data.weather[0].description;
-  })
-
-let h1 = document.querySelector("#city-name")
-h1.innerHTML = city;
-
 // setting date and time
 let now = new Date();
 
@@ -40,7 +20,7 @@ let months = [
   "Sep",
   "Oct",
   "Nov",
-  "Dec",
+  "Dec"
 ];
 month = months[month];
 
@@ -51,7 +31,7 @@ let days = [
   "Wednesday",
   "Thursday",
   "Friday",
-  "Saturday",
+  "Saturday"
 ];
 
 day = days[day];
@@ -62,32 +42,33 @@ currentDate.innerHTML = `${day} ${month} ${date}, ${year} ${hour}:${minutes}`;
 // setting search bar
 let citySubmit = document.querySelector("#submit-city");
 
-function citySearch(event) {
-  event.preventDefault();
-  let citySearched = document.querySelector("#city-search");
-  let changeCity = document.querySelector("#city-name");
-  changeCity.innerHTML = `${citySearched.value}`;
+function showWeather(response) {
+  console.log(response.data.name);
+  document.querySelector("#city-name").innerHTML = response.data.name;
+  document.querySelector("#current-temp").innerHTML = Math.round(
+    response.data.main.temp
+  );
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+  document.querySelector("#weatherCondition").innerHTML =
+    response.data.weather[0].description;
+  console.log();
+}
+function search(city) {
+  let units = "imperial";
+  let apiKey = "ce96567bcfe36200b8c50bb6f61e4a04";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(showWeather);
 }
 
-citySubmit.addEventListener("click", citySearch);
-
-// adding link to convert temp
-
-let farenheight = document.querySelector("#faren");
-let celcius = document.querySelector("#celc");
-
-function convertFaren(event) {
+function handleSubmit(event) {
   event.preventDefault();
-  let currentFaren = document.querySelector("#current-temp");
-  currentFaren.innerHTML = "86°";
+  let city = document.querySelector("#city-search").value;
+  search(city);
 }
 
-farenheight.addEventListener("click", convertFaren);
+citySubmit.addEventListener("click", handleSubmit);
 
-function convertCelc(event) {
-  event.preventDefault();
-  let currentCelc = document.querySelector("#current-temp");
-  currentCelc.innerHTML = "44°";
-}
-
-celcius.addEventListener("click", convertCelc);
+search("New York");
