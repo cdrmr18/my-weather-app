@@ -45,15 +45,8 @@ li {
 .overview li {
   line-height: 5px;
 }
-
-.overview {
-  /* margin-bottom: 20px; */
-}
 .temp-box {
   text-align: center;
-}
-.weather-box {
-  /* margin-bottom: 50px; */
 }
 .weather-alt-info {
   position: relative;
