@@ -59,12 +59,12 @@ function search(city) {
 }
 
 function formatHours(timestamp) {
-  let now = new Date();
-  let hour = now.getHours();
+  let date = new Date(timestamp);
+  let hour = date.getHours();
   if (hour < 10) {
     hour = `0${hour}`;
   }
-  let minutes = now.getMinutes();
+  let minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
