@@ -37,9 +37,12 @@ li {
 }
 #footer {
   position: absolute;
-  bottom: 175px;
+  bottom: 100px;
 }
-
+.forecast-images {
+  width: 70px;
+  margin-left: -15px;
+}
 .forecast-time h3 {
   font-size: 16px;
 }
@@ -66,6 +69,7 @@ li {
 .weather-app-wrapper {
   max-width: 500px;
   margin: 30px auto;
+  background-color: ;
 }
 .weather-app-box {
   max-width: 600px;

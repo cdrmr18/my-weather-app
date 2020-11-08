@@ -76,7 +76,7 @@ function formatHours(timestamp) {
     forecastElement.innerHTML = null;
     let forecast = null;
 
-    for (let index = 0; index < 5; index++) {
+    for (let index = 0; index < 6; index++) {
       forecast = response.data.list[index];
       forecastElement.innerHTML += `
         <div class="col-2 forecast-time">
@@ -84,11 +84,12 @@ function formatHours(timestamp) {
               ${formatHours(forecast.dt * 1000)}
             </h3>
             <img 
+              class= "forecast-images"
               src= "http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
               alt=""
             />
             <div class="forecast-temp">
-              <strong>${Math.round(forecast.main.temp_max)}°</strong> ${Math.round(forecast.main.temp_min)}°
+              High <strong>${Math.round(forecast.main.temp_max)}°</strong> Low ${Math.round(forecast.main.temp_min)}°
             </div>
           </div>
         `;
