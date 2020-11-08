@@ -35,6 +35,14 @@ li {
   top: 20px;
   left: 65px;
 }
+#footer {
+  position: absolute;
+  bottom: 175px;
+}
+
+.forecast-time h3 {
+  font-size: 16px;
+}
 #icon {
   margin: 0 auto;
   position: relative;
